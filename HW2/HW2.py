@@ -37,12 +37,23 @@ with tf.Session() as sess:
     # create an array of 100 normally distributed random numbers with Mean = 1 and Standard deviation = 2
     normal = np.random.normal(1.0, 2.0, 100)
 
-    # run the final node and feed the 100 normally randomly distributed values as input to tensor a
-    print(sess.run(f, feed_dict={ a: normal }))
+    # run the final node and feed the 100 normally distributed random values as input to tensor a
+    print("Value of f: %s" % sess.run(f, feed_dict={ a: normal }))
 
     # write the graph
     sess.graph.as_graph_def()
     file_writer = tf.summary.FileWriter('./hw2_graph', sess.graph)
 
-plt.hist(normal, bins=20)
-plt.pause(1)
+# plotting the distribution of the randomly generated numbers
+plt.hist(normal, bins=25)
+plt.title("Distribution of Randomly Generated Values (a)")
+plt.ylabel("frequency")
+plt.ylabel("value")
+plt.show()
+
+# plotting the values of the randomly generated numbers by the array index position
+plt.title("Randomly Generated Values (a) by Index")
+plt.scatter(list(range(0, 100)), normal, s=50, alpha=0.5)
+plt.xlabel("Index")
+plt.ylabel("a")
+plt.show()
