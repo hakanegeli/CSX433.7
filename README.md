@@ -1,6 +1,6 @@
 # COMPSCI X433.7 - Machine Learning With TensorFlow
 
-This repository contains homework assignments and final project assets for the Machine Learning With TensorFlow class (COMPSCI X433.7) for Hakan Egeli.
+This repository contains the **Homework Assignment** and the **Final Project** assets for the Machine Learning With TensorFlow class (COMPSCI X433.7) for Hakan Egeli.
 
 ## Homework #2
 
