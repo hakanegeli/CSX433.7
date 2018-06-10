@@ -31,8 +31,6 @@ with tf.name_scope("final_node"):
 
 # run the model
 with tf.Session() as sess:
-    # initialize variables
-    tf.global_variables_initializer().run()
 
     # create an array of 100 normally distributed random numbers with Mean = 1 and Standard deviation = 2
     normal = np.random.normal(1.0, 2.0, 100)
@@ -48,7 +46,7 @@ with tf.Session() as sess:
 plt.hist(normal, bins=25)
 plt.title("Distribution of Randomly Generated Values (a)")
 plt.ylabel("frequency")
-plt.ylabel("value")
+plt.xlabel("value")
 plt.show()
 
 # plotting the values of the randomly generated numbers by the array index position
