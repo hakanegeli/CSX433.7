@@ -8,10 +8,10 @@ To build this Blood Cell classification model, I plan to use the Blood Cell Imag
 
 Image classification problems require large number of images for the training process. In the absence of the number of images needed for model training, image augmentation and transfer learning techniques are used to address the issue. 
 
-* The Blood Cell Images dataset contains only 410 original images which were later augmented and a larger dataset of 12000 images was created. Therefore, we will not perform additional augmentation. 
-* We also plan to limit the project to building a relatively simple Convolutional Neural Network (CNN) model, training and evaluating the model and we will not perform transfer learning techniques from other pre-trained image models.
+* The Blood Cell Images dataset contains only 410 original images which were later augmented and a larger dataset of 12000 images was created. Therefore, additional augmentation of images will not be performed. 
+* For this project, I plan to limit the scope to building a relatively simple Convolutional Neural Network (CNN) model, training and evaluating the model and transfer learning techniques from other pre-trained image models will not be utilized.
 
-Reading and processing 12000 images has its own challenges. Trying to read all the images at once, converting them to float32 tensors would require very large amounts of memory and it would not be practical. In this project my goal is to address this issue by reading a batch of images that matches the batch input for model training and managing memory requirements more efficiently.
+Reading and processing 12000 images has its own challenges. Trying to read all the images at once, converting them to tensors would require very large amounts of memory and it would not be practical. In this project my goal is to address this issue by reading a batch of images that matches the batch input for model training and managing memory requirements more efficiently.
 
 # Model Success Metrics
 
