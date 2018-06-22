@@ -80,11 +80,21 @@ def train_dataset_input_fn(labels, images):
 
 
     dataset = tf.data.Dataset.from_tensor_slices((images, labels))
-    dataset = dataset.map(map_image)
 
-    dataset = dataset.shuffle(buffer_size=10000)
-    dataset = dataset.batch(batch_size)
-    dataset = dataset.repeat(num_epochs)
+    # dataset = dataset.map(map_image)
+    # dataset = dataset.shuffle(buffer_size=10000)
+    # dataset = dataset.batch(batch_size)
+    # dataset = dataset.repeat(num_epochs)
+
+    # dataset = dataset.shuffle(buffer_size=10000)
+    # dataset = dataset.repeat(num_epochs)
+    # dataset = dataset.map(map_image)
+    # dataset = dataset.batch(batch_size)
+
+    dataset = dataset.apply(tf.contrib.data.shuffle_and_repeat(10000, num_epochs))
+    dataset = dataset.apply(tf.contrib.data.map_and_batch(map_image, batch_size))
+
+    dataset = dataset.apply(tf.contrib.data.prefetch_to_device("/gpu:0"))
 
     iterator = dataset.make_initializable_iterator()
 
@@ -104,10 +114,13 @@ def validate_dataset_input_fn(labels, images):
 
 
     dataset = tf.data.Dataset.from_tensor_slices((images, labels))
-    dataset = dataset.map(map_image)
 
-    dataset = dataset.batch(batch_size)
     dataset = dataset.repeat()
+    # dataset = dataset.map(map_image)
+    # dataset = dataset.batch(batch_size)
+    dataset = dataset.apply(tf.contrib.data.map_and_batch(map_image, batch_size))
+
+    dataset = dataset.apply(tf.contrib.data.prefetch_to_device("/gpu:0"))
 
     iterator = dataset.make_initializable_iterator()
 
