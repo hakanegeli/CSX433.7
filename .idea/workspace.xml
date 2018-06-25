@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d99a39d5-ffe9-4a4e-9d3d-ae17fd652800" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CSX433.7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CSX433.7.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW2/HW2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW2/hw2_graph/events.out.tfevents.1528581456.PX-SPRO4-01" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW2/screenshots/Histogram_of_randomly_generated_numbers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW2/screenshots/Scatterplot_of_randomly_generated_numbers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW2/screenshots/tensor_graph_collapsed.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW2/screenshots/tensor_graph_expanded.PNG" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -28,6 +20,12 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>error_rate_new</find>
+      <find>eval</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,16 +45,22 @@
         <option value="$PROJECT_DIR$/FinalProject/test.py" />
         <option value="$PROJECT_DIR$/FinalProject/imagedata.py" />
         <option value="$PROJECT_DIR$/FinalProject/__init__.py" />
+        <option value="$PROJECT_DIR$/FinalProject/dummy.py" />
         <option value="$PROJECT_DIR$/FinalProject/bloodcelldata.py" />
+        <option value="$PROJECT_DIR$/FinalProject/model/plot_helpers.py" />
+        <option value="$PROJECT_DIR$/FinalProject/inference.py" />
+        <option value="$PROJECT_DIR$/FinalProject/utils.py" />
         <option value="$PROJECT_DIR$/FinalProject/train.py" />
+        <option value="$PROJECT_DIR$/FinalProject/plot.py" />
+        <option value="$PROJECT_DIR$/FinalProject/eval.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="444" />
-    <option name="y" value="45" />
-    <option name="width" value="2397" />
-    <option name="height" value="1521" />
+    <option name="x" value="296" />
+    <option name="y" value="30" />
+    <option name="width" value="1598" />
+    <option name="height" value="1014" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -77,6 +81,11 @@
               <item name="CSX433.7" type="462c0819:PsiDirectoryNode" />
               <item name="FinalProject" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CSX433.7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CSX433.7" type="462c0819:PsiDirectoryNode" />
+              <item name="HW2" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -85,7 +94,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -104,7 +113,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train">
+  <component name="RunManager" selected="Python.eval">
     <configuration name="HW2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSX433.7" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,7 +132,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="bloodcelldata" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="eval" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSX433.7" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,61 +144,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FinalProject/bloodcelldata.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="study4" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CSX433.7" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FinalProject" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FinalProject/study4.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="study5" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CSX433.7" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FinalProject" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FinalProject/study5.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CSX433.7" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FinalProject" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FinalProject/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FinalProject/eval.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -214,19 +169,14 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.study4" />
-      <item itemvalue="Python.study5" />
-      <item itemvalue="Python.test" />
+      <item itemvalue="Python.HW2" />
       <item itemvalue="Python.train" />
-      <item itemvalue="Python.bloodcelldata" />
+      <item itemvalue="Python.eval" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.eval" />
         <item itemvalue="Python.train" />
-        <item itemvalue="Python.bloodcelldata" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.study5" />
-        <item itemvalue="Python.study4" />
       </list>
     </recent_temporary>
   </component>
@@ -261,16 +211,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2148" height="1175" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16200852" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18018967" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291866" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291866" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3291866" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.384689" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32854405" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3840996" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32950193" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399623" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -284,21 +234,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1881243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31196985" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32987747" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399623" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32987747" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -314,43 +264,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FinalProject/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5420">
-          <caret line="271" selection-start-line="271" selection-end-line="271" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5460">
-          <caret line="273" lean-forward="true" selection-start-line="273" selection-end-line="273" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/study5.py" />
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6260">
-          <caret line="313" column="33" selection-start-line="313" selection-start-column="8" selection-end-line="313" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/study2.py" />
-    <entry file="file://$PROJECT_DIR$/FinalProject/study3.py" />
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6280">
-          <caret line="314" selection-start-line="314" selection-end-line="314" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -359,105 +273,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5640">
-          <caret line="282" column="39" selection-start-line="282" selection-start-column="39" selection-end-line="282" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3360">
-          <caret line="168" selection-start-line="168" selection-end-line="168" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3600">
-          <caret line="190" column="51" lean-forward="true" selection-start-line="190" selection-start-column="51" selection-end-line="190" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3842">
-          <caret line="226" lean-forward="true" selection-start-line="226" selection-end-line="226" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3927">
-          <caret line="231" column="51" lean-forward="true" selection-start-line="231" selection-start-column="51" selection-end-line="231" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3045">
-          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
     <entry file="file://$PROJECT_DIR$/FinalProject/test2.py" />
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
     <entry file="file://$PROJECT_DIR$/HW2/HW2.py" />
     <entry file="file://$PROJECT_DIR$/HW2/HW2.py" />
     <entry file="file://$PROJECT_DIR$/HW2/HW2.py" />
@@ -466,7 +296,6 @@
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/python/data/ops/dataset_ops.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/python/ops/image_ops_impl.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/tensorflow/python/framework/constant_op.py" />
-    <entry file="file://$PROJECT_DIR$/HW2/HW2.py" />
     <entry file="file://$USER_HOME$/OneDrive/Documents/Hakan/Education/UC Berkeley Extension/Classes/X433.7/script.ipynb" />
     <entry file="file://$USER_HOME$/Documents/Projects/Berkeley/DogBread/NN with n Layers.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -491,24 +320,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FinalProject/test2.py" />
     <entry file="file://$PROJECT_DIR$/FinalProject/study1.py" />
-    <entry file="file://$PROJECT_DIR$/FinalProject/study2.py" />
     <entry file="file://$PROJECT_DIR$/FinalProject/study3.py" />
     <entry file="file://$PROJECT_DIR$/FinalProject/study4.py" />
     <entry file="file://$PROJECT_DIR$/FinalProject/study5.py" />
-    <entry file="file://$PROJECT_DIR$/FinalProject/TFRecordTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="85" lean-forward="true" selection-start-line="84" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="93" column="68" selection-start-line="93" selection-start-column="68" selection-end-line="93" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalProject/TFRecordTest.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/test.py" />
     <entry file="file://$PROJECT_DIR$/FinalProject/imagedata.py" />
     <entry file="file://$USER_HOME$/SkyDrive/Documents/Hakan/Education/UC Berkeley Extension/Classes/X433.3/HW4/HW4HakanEgeli.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -527,23 +343,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FinalProject/bloodcelldata.py">
+    <entry file="file://$PROJECT_DIR$/FinalProject/study2.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/dummy.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/bloodcelldata.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/model/plot_helpers.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/inference.py" />
+    <entry file="file://$PROJECT_DIR$/FinalProject/etl.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW2/HW2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-528">
-          <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="4" selection-start-line="1" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalProject/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalProject/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FinalProject/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="294" lean-forward="true" selection-start-line="294" selection-end-line="294" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="380">
+          <caret line="268" lean-forward="true" selection-start-line="268" selection-end-line="268" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalProject/eval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="282" lean-forward="true" selection-start-line="282" selection-end-line="282" />
         </state>
       </provider>
     </entry>
