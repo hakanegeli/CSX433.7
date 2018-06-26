@@ -202,7 +202,8 @@ def main(argv):
 
         # embedding data pipeline and the iterator
         # we have selected 1/4th of the Test Data, 311 rows, due to the memory limitations of our GPU
-        embedding_iterator = ImageData.test_dataset_input_fn(test_labels, test_images, 311)
+        embedding_iterator = ImageData.test_dataset_input_fn(
+            test_labels, test_images, 311, prefetch_to_device=False)
         embedding_next_batch = embedding_iterator.get_next()
 
         # placeholders
