@@ -15,8 +15,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 COMPSCI X433.7 - Machine Learning With TensorFlow
 Final Project, June, 26, 2018
 Hakan Egeli
- 
- 
+
+
 This module conatins the following functionality: 
 * model definition for the Convolutional Neural Network,
 * code to train and test the model
@@ -178,7 +178,7 @@ def main(argv):
         print("Train Image Count = {}\nTest Image Count = {}".format(train_count, test_count))
 
         # saving the reference to the test images for later inference!
-        ImageData.save_as_csv(X_test, y_test, ['image_name', 'label'], os.path.join('data', 'test_data.csv'))
+        ImageData.save_as_csv(X_test, y_test, ['image_name', 'label'], LOG_DIR, 'test_data.csv')
 
         number_of_batches = int(ceil(len(y_train) / batch_size))
         print("{} batches in each epoch\n".format(number_of_batches))
@@ -187,14 +187,18 @@ def main(argv):
         train_images = X_train
         train_labels = tf.cast(y_train, tf.int32)
 
-        train_iterator = ImageData.train_dataset_input_fn(train_labels, train_images, batch_size, num_epochs)
+        # when running using a GPU, set prefetch_to_device=True
+        train_iterator = ImageData.train_dataset_input_fn(
+            train_labels, train_images, batch_size, num_epochs, prefetch_to_device=True)
         train_next_batch = train_iterator.get_next()
 
         # test data pipeline and the iterator
         test_images = X_test
         test_labels = tf.cast(y_test, tf.int32)
 
-        test_iterator = ImageData.test_dataset_input_fn(test_labels, test_images, batch_size)
+        # when running using a GPU, set prefetch_to_device=True
+        test_iterator = ImageData.test_dataset_input_fn(
+            test_labels, test_images, batch_size, prefetch_to_device=True)
         test_next_batch = test_iterator.get_next()
 
         # embedding data pipeline and the iterator

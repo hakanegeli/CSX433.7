@@ -164,7 +164,7 @@ def main(argv):
     with g.as_default():
         # we are going to use the image names that we saved when we stratified the data and created our test set
         # these images were not used to train the model!
-        X_test, y_test = ImageData.image_names_and_labels_from_csv()
+        X_test, y_test = ImageData.image_names_and_labels_from_csv(path=LOG_DIR, filename='test_data.csv')
 
         test_count = len(y_test)
         print("Test Image Count = {}".format(test_count))

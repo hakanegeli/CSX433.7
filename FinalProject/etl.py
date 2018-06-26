@@ -38,7 +38,7 @@ class ImageData:
         if error:
             exit(0)
 
-    def image_names_and_labels_from_csv(path='data', filename='test_data.csv'):
+    def image_names_and_labels_from_csv(path, filename):
         df = read_csv(os.path.join(path, filename), index_col=False, header=0)
         return df['image_name'].values, df['label'].values
 
@@ -85,17 +85,20 @@ class ImageData:
 
         dataset = tf.data.Dataset.from_tensor_slices((images, labels))
 
+        # next 4 lines are slow for the first batch and fast for the rest of the batches
         # dataset = dataset.map(map_image)
-        # dataset = dataset.shuffle(buffer_size=10000)
+        # dataset = dataset.shuffle(buffer_size=12500)
         # dataset = dataset.batch(batch_size)
         # dataset = dataset.repeat(num_epochs)
 
-        # dataset = dataset.shuffle(buffer_size=10000)
+        # following 4 lines are faster for the fisrt batch but slower for the following batches
+        # dataset = dataset.shuffle(buffer_size=12500)
         # dataset = dataset.repeat(num_epochs)
         # dataset = dataset.map(map_image)
         # dataset = dataset.batch(batch_size)
 
-        dataset = dataset.apply(tf.contrib.data.shuffle_and_repeat(10000, num_epochs))
+        # # according to Tensorflow data pipeline folks, this is the best way to set the iterator!
+        dataset = dataset.apply(tf.contrib.data.shuffle_and_repeat(12500, num_epochs))
         dataset = dataset.apply(tf.contrib.data.map_and_batch(map_image, batch_size))
         if prefetch_to_device:
             dataset = dataset.apply(tf.contrib.data.prefetch_to_device("/gpu:0"))
@@ -130,8 +133,10 @@ class ImageData:
         X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=test_size, stratify=y, shuffle=shuffle)
         return X_train, X_test, y_train, y_test
 
-    def save_as_csv(x, y, headerrow, filename):
-        with open(filename, "w+") as output:
+    def save_as_csv(x, y, headerrow, path, filename):
+        if not os.path.exists(path):
+            os.makedirs(path, exist_ok=True)
+        with open(os.path.join(path, filename), "w+") as output:
             writer = csv.writer(output, lineterminator='\n')
             writer.writerow(headerrow)
             writer.writerows(zip(x, y))
