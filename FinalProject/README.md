@@ -59,6 +59,11 @@ Once the training is completed you can run the `eval.py` to evaluate the model a
 
 The program will also output the model's Precision, Recall and the F1-scores as well as the overall accuracy.
 
+If running from the command line please make sure you chnage your current directory to FinalProject folder before you type the following command:
+```{python}
+python eval.py
+```
+
 ### Step 3
 
 During training and testing, the program will also create a `model` directory where model graph and parameter summaries are saved to be viewed by Tensorboard. 

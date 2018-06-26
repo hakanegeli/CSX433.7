@@ -16,7 +16,6 @@ COMPSCI X433.7 - Machine Learning With TensorFlow
 Final Project, June, 26, 2018
 Hakan Egeli
 
-
 This module conatins the following functionality: 
 * model definition for the Convolutional Neural Network,
 * code to train and test the model
@@ -29,7 +28,7 @@ num_epochs = 5
 batch_size = 128
 
 
-# define the model
+# define the network
 def cnn_model_fn(features, is_training, reuse=tf.AUTO_REUSE):
     # Input Layer
     with tf.name_scope("input_layer"):
@@ -151,7 +150,7 @@ def loss_fn(labels, logits):
     return tf.losses.sparse_softmax_cross_entropy(labels=labels, logits=logits)
 
 
-# we will use accuracy to evaluate the performance of the training
+# use accuracy to evaluate the performance of the training and the test
 def accuracy_fn(predictions):
     return tf.reduce_mean(tf.cast(predictions, tf.float32))
 
@@ -169,7 +168,7 @@ def main(argv):
         image_names, image_labels = ImageData.image_names_and_labels()
 
         # images that are read from the folders need to be stratified.
-        # shuffle and split the dataset into 90%-10% train/test.
+        # shuffle and split the data into 90%-10% train/test datasets.
         # stratify will make sure that the classes are distributed equally among these two sets
         X_train, X_test, y_train, y_test = ImageData.stratify(image_names, image_labels, test_size=0.1, shuffle=True)
 
@@ -177,7 +176,7 @@ def main(argv):
         test_count = len(y_test)
         print("Train Image Count = {}\nTest Image Count = {}".format(train_count, test_count))
 
-        # saving the reference to the test images for later inference!
+        # saving the reference to the test images for later (to be used in eval.py)!
         ImageData.save_as_csv(X_test, y_test, ['image_name', 'label'], LOG_DIR, 'test_data.csv')
 
         number_of_batches = int(ceil(len(y_train) / batch_size))
@@ -189,7 +188,7 @@ def main(argv):
 
         # when running using a GPU, set prefetch_to_device=True
         train_iterator = ImageData.train_dataset_input_fn(
-            train_labels, train_images, batch_size, num_epochs, prefetch_to_device=True)
+            train_labels, train_images, batch_size, num_epochs, prefetch_to_device=False)
         train_next_batch = train_iterator.get_next()
 
         # test data pipeline and the iterator
@@ -198,7 +197,7 @@ def main(argv):
 
         # when running using a GPU, set prefetch_to_device=True
         test_iterator = ImageData.test_dataset_input_fn(
-            test_labels, test_images, batch_size, prefetch_to_device=True)
+            test_labels, test_images, batch_size, prefetch_to_device=False)
         test_next_batch = test_iterator.get_next()
 
         # embedding data pipeline and the iterator
@@ -213,8 +212,7 @@ def main(argv):
         # model
         logits = cnn_model_fn(features, is_training=True)
 
-        # embedding
-        # we will use the last layer for embeddings (for Projector visualization in tensorboard)
+        # embedding (for Projector visualization in tensorboard)
         embedding = tf.Variable(np.zeros([311, logits.shape[1]]), dtype=tf.float32, name='test_embedding')
         assignment = embedding.assign(logits)
 
@@ -271,14 +269,14 @@ def main(argv):
 
             sess.graph.as_graph_def()
 
-            # we will log training values separately from the test values
+            # log training values separately from the test values
             train_writer = tf.summary.FileWriter(os.path.join(LOG_DIR, 'train'), sess.graph)
             test_writer = tf.summary.FileWriter(os.path.join(LOG_DIR, 'test'), sess.graph)
 
-            # Saves a config file that TensorBoard will read during startup.
+            # saves the config file that TensorBoard will read during startup.
             projector.visualize_embeddings(test_writer, config)
 
-            # merge all sumaries so that they can be written to the model file
+            # merge all summaries so that they can be written to the model file
             merged_summaries = tf.summary.merge_all()
 
             # initializations
@@ -303,7 +301,7 @@ def main(argv):
                         loss_train, _ = sess.run([loss, train_op], feed_dict=feed_dict_train)
                         l.append(loss_train)
 
-                    # at every 20 iterations, calculate the accuracy and log the summaries for both tran and test
+                    # at every 20 iterations calculate the accuracy and log the summaries for both train and test
                     if iter % 20 == 0:
                         with tf.name_scope('evaluation'):
                             with tf.name_scope('train'):
@@ -343,7 +341,7 @@ def main(argv):
 
                     iter += 1
                 except tf.errors.OutOfRangeError:
-                    # end of all epochs
+                    # this is the end of all epochs!
                     print("Last Epoch {} completed".format(epoch))
 
                     # calculate the final test accuracy and model summaries and save it
@@ -387,6 +385,7 @@ def main(argv):
                     save_path = saver.save(sess, os.path.join(LOG_DIR, 'model.ckpt'), iter)
                     break
 
+            # goodbye!
             print("done!")
 
             # plot the accumulated loss values over the course of iterations

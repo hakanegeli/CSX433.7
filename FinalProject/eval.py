@@ -15,7 +15,6 @@ COMPSCI X433.7 - Machine Learning With TensorFlow
 Final Project, June, 26, 2018
 Hakan Egeli
 
-
 This module conatins the following functionality: 
 * model definition for the Convolutional Neural Network,
 * code to restore the model from the checkpoint file
@@ -28,7 +27,7 @@ num_epochs = 3
 batch_size = 1244 # we are going to use all the images in the test set during evaluation
 
 
-# define the model
+# define the network
 def cnn_model_fn(features, is_training, reuse=tf.AUTO_REUSE):
     with tf.device('/cpu:0'):
         # Input Layer
@@ -151,7 +150,7 @@ def loss_fn(labels, logits):
     return tf.losses.sparse_softmax_cross_entropy(labels=labels, logits=logits)
 
 
-# we will use accuracy to evaluate the performance of the training
+# use accuracy to evaluate the performance of the training and the test
 def accuracy_fn(predictions):
     return tf.reduce_mean(tf.cast(predictions, tf.float32))
 
@@ -279,6 +278,9 @@ def main(argv):
             class_names = ['EOSINOPHIL', 'LYMPHOCYTE', 'MONOCYTE', 'NEUTROPHIL']
             print(classification_report(y_test, y_predictions, target_names=class_names))
             plot_confusion_matrix(cm, classes=class_names)
+
+        # goodbye!
+        print("done!")
 
 
 if __name__ == '__main__':
